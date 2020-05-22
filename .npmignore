@@ -1,0 +1,6 @@
+src/
+
+.eslintignore
+.eslintrc
+
+tsconfig.json
