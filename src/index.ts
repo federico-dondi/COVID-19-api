@@ -42,6 +42,26 @@ export default class COVID19Api {
     const res = await this.api.get(`dayone/country/${country}/status/${status}/live`); return res.data as DayOne[]
   }
 
+  async byCountry (country: string, status: string, from: Date, to :Date): Promise<DayOne[]> {
+    const res = await this.api.get(`country/${country}/status/${status}?from=${from}&to=${to}`); return res.data as DayOne[]
+  }
+
+  async byCountryAllStatus (country: string, from: Date, to :Date): Promise<DayOneAllStatus[]> {
+    const res = await this.api.get(`country/${country}?from=${from}&to=${to}`); return res.data as DayOneAllStatus[]
+  }
+
+  async byCountryTotal (country: string, status: string, from: Date, to :Date): Promise<DayOne[]> {
+    const res = await this.api.get(`total/country/${country}/status/${status}?from=${from}&to=${to}`); return res.data as DayOne[]
+  }
+
+  async byCountryTotalAllStatus (country: string, from: Date, to :Date): Promise<DayOneAllStatus[]> {
+    const res = await this.api.get(`total/country/${country}?from=${from}&to=${to}`); return res.data as DayOneAllStatus[]
+  }
+
+  async byCountryLive (country: string, status: string, from: Date, to :Date): Promise<DayOne[]> {
+    const res = await this.api.get(`country/${country}/status/${status}/live?from=${from}&to=${to}`); return res.data as DayOne[]
+  }
+
   async stats (): Promise<StatsResponse> {
     const res = await this.api.get('stats'); return res.data as StatsResponse
   }
