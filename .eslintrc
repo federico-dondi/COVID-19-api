@@ -4,7 +4,9 @@
     "node": true
   },
   "extends": [
-    "standard"
+    "standard",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -12,11 +14,13 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 11,
+    "ecmaVersion": 2018,
     "sourceType": "module"
+  },
+  "rules": {
+    "no-useless-constructor": "off"
   },
   "plugins": [
     "@typescript-eslint"
-  ],
-  "rules": {}
+  ]
 }
