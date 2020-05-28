@@ -20,7 +20,8 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint src/*.ts src/**/*.ts",
-    "lint:fix": "eslint src/*.ts src/**/*.ts --fix"
+    "lint:fix": "eslint src/*.ts src/**/*.ts --fix",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.19.2"
